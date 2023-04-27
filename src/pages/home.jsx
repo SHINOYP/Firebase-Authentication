@@ -4,6 +4,8 @@ import Secondpage from "../assets/img2.jpg"
 import  './homeStyle.css'
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import Logo from '../assets/logo.svg'
+import Car1 from '../assets/car1.svg'
+import Car2 from '../assets/car2.svg'
 const Home = () => {  
   const componentRef = useRef();
 
@@ -16,11 +18,10 @@ const Home = () => {
 
   return (
   <div className='main'>  
-   
     <button  onClick={handlePrint} className="print__button"><LocalPrintshopIcon sx={{marginRight:'12px'}}/>  Print </button> 
-     <div ref={componentRef}>
+     <div className='main-print'  ref={componentRef}>
       <div className='main-file'>
-      <img src={Logo} style={{width:'150px'}}/>
+      <img src={Logo} className='img-logo' alt='err'/>
         <div className='table'>
           <div className='first-row'>
             <div className='fr-column-one'>
@@ -220,7 +221,7 @@ const Home = () => {
               </div>
               <div  className='rc-start-column-r2'>
                     <div className='rc-start-column-r2-imggp'> 
-
+                      <img src={Car1} alt='err'/>
                     </div>
                     <div className='rc-start-column-r2-txtgp'>
                       <div  className='checkbox'>
@@ -375,7 +376,7 @@ const Home = () => {
               </div>
               <div  className='rc-start-column-r2'>
                   <div className='rc-start-column-r2-imggp'> 
-
+                    <img src={Car2} alt='err'/>
                   </div>
                   <div className='rc-start-column-r2-txtgp'>
                     <div  className='checkbox'>
@@ -587,7 +588,7 @@ const Home = () => {
         </div>
         
       </div>
-      <img  src={Secondpage} />
+      <img  src={Secondpage} style={{display:'flex',marginInline:'auto'}} />
      
      </div>
        
