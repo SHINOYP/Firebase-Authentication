@@ -1,16 +1,31 @@
+:root {
+    --white:#ffffff;
+    --border:#d2b53e;
+    --car1bg:#dadada;
+    --car1hbg:#e2cc80;
+    --car2bg:#f5ead4;
+    --car2hbg:#b3b1b2;
+    --mheadbg:#c69900;
+    --btncolor: #0a6bff;
+  }
+
+
 label{
+    display: flex;
     font-weight: 700;
-    /* @media(max-width:767px){
-       font-size:8px;
+    font-size: 13px;
+    @media(max-width:767px){
+       font-size:12px;
        font-weight: 600;
-    } */
+    }
 }
 small{
     font-weight: 700;
-    /* @media(max-width:767px){
-        font-size:5px;
+    font-size: 12px;
+    @media(max-width:767px){
+        font-size:8px;
         font-weight: 600;
-     } */
+     }
 }
 input.chk-box{
     width: 30px;
@@ -22,11 +37,14 @@ input.chk-box{
      } */
 }
 input[type=text]{
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     outline: none;
     background-color: transparent;
     color: inherit;  
+    @media(max-width:767px){
+        font-size:16px;
+     }
 }
 input[type=number]{
     border: none;
@@ -45,12 +63,12 @@ textarea{
 
 
 .print__button{
-    background-color: #0a6bff;
+    background-color: var(--btncolor);
     border-radius: 4px;
     border: 0;
     box-shadow: rgba(1,60,136,.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     display: inherit;
     font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -73,7 +91,7 @@ textarea{
   }
   
   .print__button:hover {
-    background-color: #065dd8;
+    background-color: var(--btncolor);
     transform: translateY(-2px);
   }
   
@@ -91,6 +109,7 @@ textarea{
     height: 100%;
     align-items: center;
     justify-content: center;
+    margin-left: 1rem;
 }
 
 
@@ -98,14 +117,15 @@ textarea{
 .main-file{
     display: flex;
     flex-direction: column;
-    background-color:rgb(255, 255, 255) ;
+    background-color:var(--white) ;
     height: 1540px;
     /* height: 100%; */
-    width: 1136px;
+    width: 100%;
     max-width: 1136px;
     padding-bottom:2rem;
     margin-bottom: 4rem;
     margin-inline: auto;
+    
     /* @media(max-width:767px){
         width: 100%;
         height: 1040px;
@@ -119,22 +139,61 @@ textarea{
     flex-direction: column;
     width: 100%;
     max-width: 1050px;
-    height: 1510px;
+    height: 1400px;
     margin-inline: auto;
-    margin-top:1rem;
-    border: 1px solid darkgoldenrod;
+    margin-top:0px;
+    border: 1px solid var(--border);
     /* @media(max-width:767px){
         width: 80%;
         height: 650px;
     } */
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1050px;
+    margin-top: 2rem;
+}
+.header-phone{
+    display: flex;
+}
+.header-title{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 0.5rem;
+}
+.header-phone-logo{
+    display: flex;
+    align-items: center;
+}
+.header-phone-margin{
+    background-color: var(--border);
+    border-color: var(--border);
+    width: 3px;
+    height: 5rem;
+    margin-right: 10px;
+    margin-block: 0px;
+    margin-left: 0px;
+}
+.header-branch{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.header-number{
+    margin-top: 3rem;
+}
 
 .first-row{
     display: flex;
     width: 100%;
-    height: 42px;
-    background-color: white;
-    border: 1px solid darkgoldenrod;
+    height: 40px;
+    background-color:var(--white);
+    border: 1px solid var(--border);
    
 }
 
@@ -157,95 +216,105 @@ textarea{
     justify-content: center;
     height: 100%;
     width: 25%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    background-color:var(--white);
 }
 .fr-column-sec-middle{
     height: 100%;
     width: 50%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    background-color: var(--white);
 }
 .fr-column-sec-end{
     height: 100%;
     width: 25%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    background-color: var(--white);
 }
 
 .second-row{
     display: flex;
     width: 100%;
     height: 4%;
-    background-color: white;
+    background-color: var(--white);
 
 }
 
 .row-address{
     display: flex;
     width: 100%;
-    height: 50px;
-    background-color: white;
-    border: 1px solid darkgoldenrod;
+    height: 5%;
+    background-color:var(--white);
+    border: 1px solid  var(--border);
+}
+.row-address-column{
+    display: flex;
+    align-items: center;
+    padding-inline: 12px;
+    width: 50%;
+    border-inline: 1px solid  var(--border);
+    justify-content: space-between;
 }
 .ra-first-column{
     height: 100%;
-    width: 50%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    width: 70%;
+    background-color: var(--white);
 }
-.ra-second-column{
-    height: 100%;
-    width: 50%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
-}
-
 .row-car{
     display: flex;
-    height: 40%;
+    height: 28%;
     width: 100%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid  var(--border);
+    background-color: var(--white);
     margin-top: 10px;
 }
 
 .rc-start-column{
     height:100%;
     width: 34%;
-    border: 1px solid darkgoldenrod;
-    background-color:#dddddf;
+    border: 1px solid  var(--border);
+    background-color:var(--car1bg);
 }
 .rc-middle-column{
     height:100%;
     width: 34%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid  var(--border);
+    background-color: var(--white);
 }
 .rc-end-column{
     height:100%;
     width: 34%;
-    border: 1px solid darkgoldenrod;
-    background-color: #fff2e6;
+    border: 1px solid  var(--border);
+    background-color:var(--car2bg);
 }
 .rc-start-column-r1{
-    height:14%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid white;
+    height:9%;
+    width: 94%;
   
 }
 .rc-start-column-r2{
     display: flex;
     height: 86%;
     width: 100%;
-    border: 1px solid darkgoldenrod;
+    border-top: 1px solid  var(--border);
+    overflow: hidden;
 }
 
 .rc-start-column-r2-imggp{
     width: 60%;
     height: 100%;
+    overflow: hidden;
 
 }
 .rc-start-column-r2-txtgp{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
     width: 40%;
     height: 100%;
    
@@ -253,9 +322,11 @@ textarea{
 .checkbox{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
-    justify-content: space-evenly;
+    height: 45px;
+    letter-spacing: 0.1px;
+    
 }
 .checkbox-txt{
     display: flex;
@@ -263,9 +334,14 @@ textarea{
     margin-block: 9px;
 }
 .rc-middle-column-r1{
-    height:14%;
-    width: 100%;
-    background-color: rgb(229, 222, 203);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 13px;
+    border: 10px solid white;
+    height:9%;
+    width: 85%;
+    background-color: var(--car1hbg);
    
 }
 .rc-middle-column-r2{
@@ -273,14 +349,14 @@ textarea{
     flex-direction: column;
     width: 100%;
     height: 30%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--mheadbg);
 }
 .rc-middle-column-r2-r1{
     display: flex;
     width: 100%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
     /* border-color: darkgoldenrod; */
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     height: 40%;
 }
 
@@ -291,8 +367,8 @@ textarea{
     justify-content: center;
     width: 35%;
     height: 100%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid  var(--border);
+    background-color:var(--white);
 }
 
 .rc-middle-column-r2-r1-middle{
@@ -300,28 +376,27 @@ textarea{
     flex-direction: column;
     width: 50%;
     height:100%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid  var(--border);
+    background-color: var(--white);
 }
 .rc-middle-column-r2-r1-end{
     display: flex;
     flex-direction: column;
     width: 35%;
     height: 100%;
-    border: 1px solid darkgoldenrod;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    background-color: var(--white);
 }
-
 .rc-middle-column-r3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 21px;
     font-size: 20px;
-    margin:14px;
-    width: 80%;
-    background-color:#cc9900;
-    height: 11%;
+    width: 86%;
+    padding-inline: 10px;
+    border: 10px solid white;
+    background-color:var(--mheadbg);
+    height: 7%;
 }
 .rc-middle-column-r4{
     width: 95%;
@@ -331,10 +406,11 @@ textarea{
 }
 .rc-middle-column-r4-column{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 24%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
     height: 100%;
     
 }
@@ -342,8 +418,8 @@ textarea{
     display: flex;
     width: 100%;
     height: 29%;
-    background-color: #cc9900;
-    border: 1px solid darkgoldenrod;
+    background-color: var(--mheadbg);
+    border: 1px solid var(--border);
    
 }
 
@@ -351,14 +427,14 @@ textarea{
     display: flex;
     width: 100%;
     height: 23%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 
 }
 
 .row-date{
-    height: 18%;
+    height: 13%;
     width: 100%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
     display: flex;
 }
 .row-date-c1{
@@ -368,14 +444,14 @@ textarea{
 }
 .row-date-c2{
     height: 100%;
-    width: 35%;
-    border: 1px solid darkgoldenrod;
+    width: 34%;
+    border: 1px solid var(--border);
 
 }
 .row-date-c3{
     height: 100%;
     width: 35%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 
 }
 
@@ -383,6 +459,7 @@ textarea{
     display: flex;
     width: 100%;
     height: 33%;
+    border-bottom: 1px solid var(--border);
     
 }
 .row-date-c1-r1-c1{
@@ -391,17 +468,20 @@ textarea{
     justify-content: center;
     width: 30%;
     height: 100%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 }
 .row-date-c1-r1-c2{
     width: 40%;
     height: 95%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 }
 .row-date-c1-r1-c3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30%;
     height: 100%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 }
 .row-date-c2-r1{
     display: flex;
@@ -420,11 +500,12 @@ textarea{
     flex-direction: column;
     height: 50%;
     width: 100%;
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--border);
 }
 .row-bottom-c1-r1-r1{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 20%;
 
@@ -432,7 +513,7 @@ textarea{
 .remarks{
     width: 99%;
     height: 20%;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--white);
     
 }
 .txt-remarks-middle{
@@ -441,34 +522,35 @@ textarea{
 }
 .row-bottom-c1-r2{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     height: 16%;
-    width: 100%;
-    border: 1px solid darkgoldenrod;
+    max-width: 100%;
+    padding-inline: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 .row-bottom-c2-r1{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 16%;
-    border: 1px solid darkgoldenrod;
+    height: 12%;
+    border: 1px solid var(--border);
 }
 .row-bottom-c2-r1-txt{
     display: flex;
     align-items: center;
-    font-size: 14px;
+    justify-content: center;
     width: 30%;
     line-break:auto ;
-    /* @media(max-width:767px){
+    @media(max-width:767px){
         font-size:8px;
         font-weight: 600;
-     } */
+     }
 }
 .row-bottom-c2-r1-txt-date{
-    width: 8%;
-   
-    
+    width: 10%;  
 }
 
 .btn-print{
@@ -479,6 +561,12 @@ textarea{
 .img-logo{
     width: 250px;
     display: flex;
-
+    
 }
 
+.txt-bottom-sign{
+    width: 50%;
+}
+.row-bottom-c2-r2{
+    overflow: hidden;
+}

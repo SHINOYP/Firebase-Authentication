@@ -1,0 +1,30 @@
+.nav-main{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+
+.nav-group-project{
+    margin-top: 8rem;
+    
+}
+.nav-group-master{
+    margin-top: 2rem;
+}
+.nav-group-setting{
+    margin-top: 2rem;
+}
+
+.nav-main-content{
+    margin-top: 1rem;
+} 
+
+.lactive-class{
+    color: red;
+}
+
+.nav-link >span{
+    padding-left: 10px;
+}
