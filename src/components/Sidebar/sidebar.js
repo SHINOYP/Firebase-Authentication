@@ -34,7 +34,7 @@ function Navsidebar() {
   const handlelogout=async()=>{
     try{
       await logOut()
-      navigate('/login')
+      navigate('/')
     }catch(err){
       console.log(err)
     }

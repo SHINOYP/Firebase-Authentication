@@ -142,7 +142,7 @@ const RegisterV1 = () => {
             </Button>
             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Typography sx={{ mr: 2, color: 'text.secondary' }}>Already have an account?</Typography>
-              <Button onClick={()=>navigate('/login')}
+              <Button onClick={()=>navigate('/')}
             
                 sx={{ color: 'primary.main', textDecoration: 'none' }}
               >

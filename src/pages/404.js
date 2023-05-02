@@ -1,13 +1,7 @@
-
-
-// ** MUI Components
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
-
-
-
 import Error from '../assets/404.png'
 
 // ** Styled Components

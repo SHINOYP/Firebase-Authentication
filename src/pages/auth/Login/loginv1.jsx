@@ -61,7 +61,7 @@ const LoginV1 = () => {
           icon: 'success',
           title: 'Success'
         })
-        navigate("/");
+        navigate("/home");
       } catch (err) {
         console.log(err.message)
         if (err.message === 'Firebase: Error (auth/invalid-email).') {
@@ -148,7 +148,7 @@ const LoginV1 = () => {
             <Box
               sx={{ mb: 4, display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}
             >
-              <FormControlLabel
+              {/* <FormControlLabel
                 label='Remember Me'
                 control={<Checkbox />}
                 sx={{ '& .MuiFormControlLabel-label': { color: 'text.primary' } }}
@@ -159,7 +159,7 @@ const LoginV1 = () => {
                 sx={{ color: 'primary.main', textDecoration: 'none' }}
               >
                 Forgot Password?
-              </Typography>
+              </Typography> */}
             </Box>
             <Button fullWidth size='large' type='submit' variant='contained' sx={{ mb: 7 }}>
               Login

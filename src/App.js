@@ -18,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const { user } = useUserAuth();
   const location = useLocation();
-  const excludedRoutes=['/'];
+  const excludedRoutes=['/','/login','/register'];
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,39 +26,36 @@ function App() {
     }, 2000); // 3 seconds delay
   }, []);
   const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-  width:100px;
-  height:100px;
-  @media (max-width: 768px) {
-    width: 50px;
-    height: 50px;
-  }
-`;
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+    width:100px;
+    height:100px;
+    @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
+  `;
 
   return (
     <div className='app'>
-        { !loading && excludedRoutes.includes(location.pathname) && <SideNavbar/>}
+      { !loading && !excludedRoutes.includes(location.pathname) && <SideNavbar/>}
       {loading ? (
         <div className='appmain-loading'>
-
           <HashLoader
-          css={override}
-          loading={loading}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
-      </div>
+            css={override}
+            loading={loading}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
       
       
     ) : (
       <div className='app-main'>
         <Routes>
-          <Route path='/' element={<PrivateRoute/>}>
-              <Route path='/' element={<Home/>}/>
-          </Route>
-            <Route  path='/login' element={<Login/>}/>
+            <Route path='/' element={<Login/>}/>
+            <Route path='/home' element={<Home/>}/>
             <Route  path='/register' element={<Register/>}/>
             <Route path="*" element={<Error404/>} />
         </Routes>

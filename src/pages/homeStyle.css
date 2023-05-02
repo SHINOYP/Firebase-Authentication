@@ -13,19 +13,12 @@
 label{
     display: flex;
     font-weight: 700;
-    font-size: 13px;
-    @media(max-width:767px){
-       font-size:12px;
-       font-weight: 600;
-    }
+    font-size: 17px;
 }
 small{
     font-weight: 700;
-    font-size: 12px;
-    @media(max-width:767px){
-        font-size:8px;
-        font-weight: 600;
-     }
+    font-size: 14px;
+ 
 }
 input.chk-box{
     width: 30px;
@@ -37,14 +30,13 @@ input.chk-box{
      } */
 }
 input[type=text]{
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 500;
     border: none;
     outline: none;
     background-color: transparent;
     color: inherit;  
-    @media(max-width:767px){
-        font-size:16px;
-     }
+   
 }
 input[type=number]{
     border: none;
@@ -81,7 +73,7 @@ textarea{
     padding: 16px 20px;
     position: sticky;
     top: 0;
-    margin-left: 80vw;
+    margin-left: 80%;
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
@@ -110,6 +102,18 @@ textarea{
     align-items: center;
     justify-content: center;
     margin-left: 1rem;
+    @media(max-width:1104px){
+        width: 150%;
+        margin-left: 15rem;
+    }
+    @media(max-width:920px){
+        width: 150%;
+        margin-left: 25rem;
+    }
+    @media(max-width:726px){
+        width: 250%;
+        margin-left: 40rem;
+    }
 }
 
 
@@ -138,8 +142,8 @@ textarea{
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1050px;
-    height: 1400px;
+    max-width: 994px;
+    height: 1300px;
     margin-inline: auto;
     margin-top:0px;
     border: 1px solid var(--border);
@@ -153,11 +157,18 @@ textarea{
     justify-content: space-between;
     margin-inline: auto;
     width: 100%;
-    max-width: 1050px;
+    max-width: 980px;
     margin-top: 2rem;
 }
 .header-phone{
     display: flex;
+    margin-top: 1rem;
+    gap:2;
+}
+.header-number{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
 }
 .header-title{
     display: flex;
@@ -166,26 +177,31 @@ textarea{
     color: white;
     align-items: center;
     padding: 0.5rem;
+    margin-top: 1.3rem;
 }
 .header-phone-logo{
     display: flex;
     align-items: center;
+    margin-block:1.5px ;
 }
 .header-phone-margin{
     background-color: var(--border);
     border-color: var(--border);
     width: 3px;
-    height: 5rem;
+    height: 6.3rem;
     margin-right: 10px;
     margin-block: 0px;
     margin-left: 0px;
 }
 .header-branch{
-    margin-top: 1rem;
-    margin-left: 1rem;
+    display: flex;
+    margin-block: 1.5rem;
+    gap:2;
 }
-.header-number{
-    margin-top: 3rem;
+
+.header-branch-label{
+    width: fit-content;
+    margin: 0px;
 }
 
 .first-row{
@@ -249,11 +265,21 @@ textarea{
 }
 .row-address-column{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-inline: 12px;
+    padding: 12px;
     width: 50%;
     border-inline: 1px solid  var(--border);
     justify-content: space-between;
+    height: 80%;
+}
+.row-address-column-r1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 21px;
+
 }
 .ra-first-column{
     height: 100%;
@@ -262,7 +288,7 @@ textarea{
 }
 .row-car{
     display: flex;
-    height: 28%;
+    height: 29%;
     width: 100%;
     border: 1px solid  var(--border);
     background-color: var(--white);
@@ -274,6 +300,7 @@ textarea{
     width: 34%;
     border: 1px solid  var(--border);
     background-color:var(--car1bg);
+    overflow: hidden;
 }
 .rc-middle-column{
     height:100%;
@@ -292,10 +319,10 @@ textarea{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 10px solid white;
+    border: 8px solid white;
     height:9%;
     width: 94%;
-  
+    padding-block: 4px;
 }
 .rc-start-column-r2{
     display: flex;
@@ -315,7 +342,7 @@ textarea{
     display: flex;
     flex-direction: column;
     margin-right: 5px;
-    width: 40%;
+    width: 41%;
     height: 100%;
    
 }
@@ -333,14 +360,19 @@ textarea{
     flex-direction: column;
     margin-block: 9px;
 }
+.meter-gauge{
+    display: flex;
+    align-items: center;
+}
+
 .rc-middle-column-r1{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-inline: 13px;
-    border: 10px solid white;
-    height:9%;
-    width: 85%;
+    border: 6px solid white;
+    height:12%;
+    width: 88%;
     background-color: var(--car1hbg);
    
 }
@@ -406,12 +438,12 @@ textarea{
 }
 .rc-middle-column-r4-column{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 24%;
     border: 1px solid var(--border);
     height: 100%;
+    line-height: 15px;
     
 }
 .rc-middle-column-r4-hr1{
@@ -526,7 +558,7 @@ textarea{
     justify-content: space-between;
     height: 16%;
     max-width: 100%;
-    padding-inline: 10px;
+    padding-inline: 8px;
     border: 1px solid var(--border);
     overflow: hidden;
 }
@@ -544,10 +576,8 @@ textarea{
     justify-content: center;
     width: 30%;
     line-break:auto ;
-    @media(max-width:767px){
-        font-size:8px;
-        font-weight: 600;
-     }
+    margin-left: 5px;
+  
 }
 .row-bottom-c2-r1-txt-date{
     width: 10%;  
@@ -565,8 +595,30 @@ textarea{
 }
 
 .txt-bottom-sign{
-    width: 50%;
+    width: 16%;
 }
 .row-bottom-c2-r2{
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    padding: 0.2rem;
+    
+}
+.row-bottom-c2-r2-txt{
+    font-size: 16.4px;
+    text-align:right;
+    line-height: 20px;
+}
+
+.row-bottom-c2-r2-txt-eng{
+    font-size: 15px;
+    text-align:justify;
+    line-height: 20px;
+    
+}
+.checkbox-arabic{
+    text-align: end;
 }
